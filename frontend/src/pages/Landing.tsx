@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Zap, Lock, PlayCircle, Cpu } from "lucide-react";
+import { ArrowRight, ShieldCheck, Zap, Lock, Cpu } from "lucide-react";
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 
