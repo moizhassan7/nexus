@@ -8,7 +8,7 @@ export const api = axios.create({
 });
 
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("vulnlens_token");
+  const token = localStorage.getItem("nexus_token");
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -19,8 +19,8 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      localStorage.removeItem("vulnlens_token");
-      localStorage.removeItem("vulnlens_user");
+      localStorage.removeItem("nexus_token");
+      localStorage.removeItem("nexus_user");
       if (!window.location.pathname.includes("/login")) {
         window.location.href = "/login";
       }

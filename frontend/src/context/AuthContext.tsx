@@ -18,20 +18,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   const persist = (token: string, u: User) => {
-    localStorage.setItem("vulnlens_token", token);
-    localStorage.setItem("vulnlens_user", JSON.stringify(u));
+    localStorage.setItem("nexus_token", token);
+    localStorage.setItem("nexus_user", JSON.stringify(u));
     setUser(u);
   };
 
   const logout = useCallback(() => {
-    localStorage.removeItem("vulnlens_token");
-    localStorage.removeItem("vulnlens_user");
+    localStorage.removeItem("nexus_token");
+    localStorage.removeItem("nexus_user");
     setUser(null);
   }, []);
 
   useEffect(() => {
-    const token = localStorage.getItem("vulnlens_token");
-    const cached = localStorage.getItem("vulnlens_user");
+    const token = localStorage.getItem("nexus_token");
+    const cached = localStorage.getItem("nexus_user");
     if (!token) {
       setLoading(false);
       return;

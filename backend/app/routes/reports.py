@@ -26,7 +26,7 @@ def download_pdf(
         raise HTTPException(status_code=404, detail="Scan not found")
 
     pdf_bytes = generate_scan_pdf(scan)
-    filename = f"vulnlens-report-{scan.project_name.replace(' ', '-')}-{scan.id}.pdf"
+    filename = f"nexus-report-{scan.project_name.replace(' ', '-')}-{scan.id}.pdf"
     return Response(
         content=pdf_bytes,
         media_type="application/pdf",

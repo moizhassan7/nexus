@@ -5,7 +5,7 @@ export async function downloadReport(scanId: number, projectName: string): Promi
   const url = window.URL.createObjectURL(new Blob([data], { type: "application/pdf" }));
   const link = document.createElement("a");
   link.href = url;
-  link.download = `vulnlens-${projectName.replace(/\s+/g, "-")}-${scanId}.pdf`;
+  link.download = `nexus-${projectName.replace(/\s+/g, "-")}-${scanId}.pdf`;
   link.click();
   window.URL.revokeObjectURL(url);
 }

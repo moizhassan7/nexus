@@ -20,7 +20,7 @@ async def lifespan(_app: FastAPI):
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
-    description="VulnLens — Smart Security Auditor for Developers",
+    description="Nexus — Smart Security Auditor for Developers",
     lifespan=lifespan,
 )
 
@@ -41,13 +41,13 @@ app.include_router(settings_routes.router)
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "app": "VulnLens", "version": settings.APP_VERSION}
+    return {"status": "ok", "app": "Nexus", "version": settings.APP_VERSION}
 
 
 @app.get("/")
 def root():
     return {
-        "name": "VulnLens",
+        "name": "Nexus",
         "tagline": "Smart Security Auditor for Developers",
         "docs": "/docs",
     }

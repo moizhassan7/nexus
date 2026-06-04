@@ -14,11 +14,11 @@ def generate_scan_pdf(scan: Scan) -> bytes:
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=letter, topMargin=0.75 * inch, bottomMargin=0.75 * inch)
     styles = getSampleStyleSheet()
-    title_style = ParagraphStyle("Title", parent=styles["Heading1"], fontSize=20, textColor=colors.HexColor("#10B981"))
+    title_style = ParagraphStyle("Title", parent=styles["Heading1"], fontSize=20, textColor=colors.HexColor("#E0531F"))
     body = styles["Normal"]
     elements: list = []
 
-    elements.append(Paragraph("VulnLens Security Report", title_style))
+    elements.append(Paragraph("Nexus Security Report", title_style))
     elements.append(Spacer(1, 12))
     elements.append(Paragraph(f"<b>Project:</b> {scan.project_name}", body))
     elements.append(Paragraph(f"<b>Scan Type:</b> {scan.scan_type}", body))
@@ -59,7 +59,7 @@ def generate_scan_pdf(scan: Scan) -> bytes:
                 elements.append(
                     Paragraph(
                         "<i>Enhanced by Groq AI — validate recommendations manually.</i>",
-                        ParagraphStyle("AI", parent=body, fontSize=9, textColor=colors.HexColor("#10B981")),
+                        ParagraphStyle("AI", parent=body, fontSize=9, textColor=colors.HexColor("#E0531F")),
                     )
                 )
             if issue.secure_example:

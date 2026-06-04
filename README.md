@@ -1,8 +1,8 @@
 # Nexus — Smart Security Auditor for Developers
 
-VulnLens is a full-stack DevSecOps security auditing platform for developers. It performs **static code analysis** (15 security rules) and **passive API scanning** (safe GET + header inspection), with JWT authentication, PostgreSQL persistence, risk scoring, and PDF reports.
+Nexus is a full-stack DevSecOps security auditing platform for developers. It performs **static code analysis** (15 security rules) and **passive API scanning** (safe GET + header inspection), with JWT authentication, PostgreSQL persistence, risk scoring, and PDF reports.
 
-> **Disclaimer:** VulnLens is an educational automated analysis tool. It is **not** a penetration test and may produce false positives. Always validate findings manually before remediation.
+> **Disclaimer:** Nexus is an educational automated analysis tool. It is **not** a penetration test and may produce false positives. Always validate findings manually before remediation.
 
 ## Tech Stack
 
@@ -39,7 +39,7 @@ secureshield/
 └── README.md
 ```
 
-Legacy SecureShield OpenAPI analyzer files remain under `backend/main.py` (root) but are **not** used by VulnLens. Run the VulnLens API via `app.main`.
+Legacy SecureShield OpenAPI analyzer files remain under `backend/main.py` (root) but are **not** used by Nexus. Run the Nexus API via `app.main`.
 
 ## Prerequisites
 

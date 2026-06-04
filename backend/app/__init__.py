@@ -1,1 +1,1 @@
-"""VulnLens backend application package."""
+"""Nexus backend application package."""
