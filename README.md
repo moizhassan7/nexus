@@ -1,4 +1,4 @@
-# VulnLens — Smart Security Auditor for Developers
+# Nexus — Smart Security Auditor for Developers
 
 VulnLens is a full-stack DevSecOps security auditing platform for developers. It performs **static code analysis** (15 security rules) and **passive API scanning** (safe GET + header inspection), with JWT authentication, PostgreSQL persistence, risk scoring, and PDF reports.
 
